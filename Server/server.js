@@ -11,7 +11,9 @@ const app = express();
 
 
 app.use(express.json());
-app.use(cors());
+const cors = require("cors");
+app.use(cors({ origin: import.meta.env.FRONTEND_URL }));
+
 await connectDb();
 
 app.use('/api/user',userRouter);
