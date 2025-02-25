@@ -62,7 +62,7 @@ const Login = () => {
         } 
       }
     } catch (error) {
-      toast.error(data.message);
+      toast.error(data.data.message);
           console.log(data.message);
     }
   };
